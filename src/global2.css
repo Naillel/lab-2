@@ -15,12 +15,18 @@ body {
 }
 
 .dir-card {
-  background: linear-gradient(180deg, #6da8e7 0%, #5f97d8 40%, #4d81c7 100%);
-  border: 1px solid #5a8fcf;
+  background:#1b2f72;
+  border: 1px solid #1b2f72;
   border-radius: 12px;
   overflow: hidden;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  animation: fade-in 1.5s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .dir-title {
@@ -47,7 +53,7 @@ body {
  }
 
  .dir-item:hover {
-   background-color: #7b5fbd;
+   background-color: purple;
  }
 
  .dir-item:hover .dir-label,
@@ -80,6 +86,12 @@ body {
   height: 100%;
   object-fit: cover;
   opacity: 0.95;
+  animation: wave-move 6s ease-in-out infinite;
+}
+
+@keyframes wave-move {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
 }
 
 .wave-overlay {
