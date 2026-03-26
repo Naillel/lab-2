@@ -179,3 +179,97 @@ body {
     .people-grid { grid-template-columns: 1fr; }
     .person { min-height: 9rem; }
 }
+
+/* index2 direction sign style */
+.dir-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #9cc0f3 0%, #dce9ff 45%, #ffffff 100%);
+    padding: 2rem 1rem;
+}
+
+.dir-card {
+    width: min(600px, 95vw);
+    border: 4px solid #1e3a7d;
+    border-radius: 10px;
+    background: radial-gradient(circle at 50% -20%, #2f5aa1 0%, #1f3d78 50%, #1a2b55 100%);
+    box-shadow: 0 16px 28px rgba(0,0,0,.32);
+    color: white;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.dir-title {
+    margin: 1rem 1.2rem 0.75rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 800;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: #f1f8ff;
+}
+
+.dir-list {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0 1rem;
+}
+
+.dir-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: .65rem .8rem;
+    background: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(255,255,255,.2);
+    border-left: 6px solid #e3d700;
+    border-radius: 0.5rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,.35);
+}
+
+.dir-label {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 700;
+    color: #f7f9ff;
+}
+
+.dir-arrow {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 900;
+}
+
+.dir-footer {
+    margin: 1rem 1rem 1.1rem;
+    padding: .6rem .9rem;
+    border-top: 1px solid rgba(255,255,255,.3);
+    background: rgba(4, 21, 62, .36);
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    letter-spacing: .16rem;
+}
+
+.dir-back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    text-decoration: none;
+    padding: .4rem .8rem;
+    border-radius: .45rem;
+    background: #f9d223;
+    color: #1d2f64;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+}
+
+@media (max-width: 500px) {
+    .dir-card { width: 98vw; }
+    .dir-item { padding: .6rem .65rem; }
+    .dir-footer { margin: .8rem 0.8rem 1rem; }
+    .dir-title { font-size: clamp(1.4rem, 4vw, 1.6rem); }
+}
